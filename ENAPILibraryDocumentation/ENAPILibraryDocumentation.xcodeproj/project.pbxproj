@@ -1,0 +1,267 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7EC1FA2516A476DD005FEB07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC1FA2416A476DD005FEB07 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7EC1FA1F16A476DD005FEB07 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7EC1FA2116A476DD005FEB07 /* libENAPILibraryDocumentation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libENAPILibraryDocumentation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EC1FA2416A476DD005FEB07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7EC1FA2816A476DD005FEB07 /* ENAPILibraryDocumentation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ENAPILibraryDocumentation-Prefix.pch"; sourceTree = "<group>"; };
+		7EC1FA3D16A47726005FEB07 /* index.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index.markdown; sourceTree = "<group>"; };
+		7EC5D4F216A6E699005CA650 /* step4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step4.png; sourceTree = "<group>"; };
+		7EC5D4F316A6E699005CA650 /* step5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step5.png; sourceTree = "<group>"; };
+		7EC5D4F416A6E699005CA650 /* step6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step6.png; sourceTree = "<group>"; };
+		7EC5D4F516A6E699005CA650 /* step9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step9.png; sourceTree = "<group>"; };
+		7EC5D4F616A6E699005CA650 /* step11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step11.png; sourceTree = "<group>"; };
+		7EC5D4F716A6E699005CA650 /* step12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step12.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7EC1FA1E16A476DD005FEB07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EC1FA2516A476DD005FEB07 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7EC1FA1616A476DD005FEB07 = {
+			isa = PBXGroup;
+			children = (
+				7EC1FA2616A476DD005FEB07 /* ENAPILibraryDocumentation */,
+				7EC1FA2316A476DD005FEB07 /* Frameworks */,
+				7EC1FA2216A476DD005FEB07 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7EC1FA2216A476DD005FEB07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EC1FA2116A476DD005FEB07 /* libENAPILibraryDocumentation.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7EC1FA2316A476DD005FEB07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EC1FA2416A476DD005FEB07 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7EC1FA2616A476DD005FEB07 /* ENAPILibraryDocumentation */ = {
+			isa = PBXGroup;
+			children = (
+				7EC5D4F216A6E699005CA650 /* step4.png */,
+				7EC5D4F316A6E699005CA650 /* step5.png */,
+				7EC5D4F416A6E699005CA650 /* step6.png */,
+				7EC5D4F516A6E699005CA650 /* step9.png */,
+				7EC5D4F616A6E699005CA650 /* step11.png */,
+				7EC5D4F716A6E699005CA650 /* step12.png */,
+				7EC1FA3D16A47726005FEB07 /* index.markdown */,
+				7EC1FA2716A476DD005FEB07 /* Supporting Files */,
+			);
+			path = ENAPILibraryDocumentation;
+			sourceTree = "<group>";
+		};
+		7EC1FA2716A476DD005FEB07 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7EC1FA2816A476DD005FEB07 /* ENAPILibraryDocumentation-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7EC1FA2016A476DD005FEB07 /* ENAPILibraryDocumentation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EC1FA2F16A476DD005FEB07 /* Build configuration list for PBXNativeTarget "ENAPILibraryDocumentation" */;
+			buildPhases = (
+				7EC1FA1D16A476DD005FEB07 /* Sources */,
+				7EC1FA1E16A476DD005FEB07 /* Frameworks */,
+				7EC1FA1F16A476DD005FEB07 /* CopyFiles */,
+				7EC1FA3E16A4773F005FEB07 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ENAPILibraryDocumentation;
+			productName = ENAPILibraryDocumentation;
+			productReference = 7EC1FA2116A476DD005FEB07 /* libENAPILibraryDocumentation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7EC1FA1816A476DD005FEB07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "The Echo Nest Corporation";
+			};
+			buildConfigurationList = 7EC1FA1B16A476DD005FEB07 /* Build configuration list for PBXProject "ENAPILibraryDocumentation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7EC1FA1616A476DD005FEB07;
+			productRefGroup = 7EC1FA2216A476DD005FEB07 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7EC1FA2016A476DD005FEB07 /* ENAPILibraryDocumentation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7EC1FA3E16A4773F005FEB07 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/appledoc --project-name ENAPILibrary --project-company \"Echo Nest LLC\" --company-id com.echonest --index-desc ./ENAPILibraryDocumentation/index.markdown --exit-threshold 2  --output ~/help --include ./ENAPILibraryDocumentation ../ENAPILibrary";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7EC1FA1D16A476DD005FEB07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7EC1FA2D16A476DD005FEB07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7EC1FA2E16A476DD005FEB07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7EC1FA3016A476DD005FEB07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ENAPILibraryDocumentation.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ENAPILibraryDocumentation/ENAPILibraryDocumentation-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7EC1FA3116A476DD005FEB07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ENAPILibraryDocumentation.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ENAPILibraryDocumentation/ENAPILibraryDocumentation-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7EC1FA1B16A476DD005FEB07 /* Build configuration list for PBXProject "ENAPILibraryDocumentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EC1FA2D16A476DD005FEB07 /* Debug */,
+				7EC1FA2E16A476DD005FEB07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EC1FA2F16A476DD005FEB07 /* Build configuration list for PBXNativeTarget "ENAPILibraryDocumentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EC1FA3016A476DD005FEB07 /* Debug */,
+				7EC1FA3116A476DD005FEB07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7EC1FA1816A476DD005FEB07 /* Project object */;
+}

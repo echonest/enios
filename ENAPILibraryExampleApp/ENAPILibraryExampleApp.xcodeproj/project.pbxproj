@@ -1,0 +1,380 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7EC1FA5216A478D2005FEB07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC1FA5116A478D2005FEB07 /* UIKit.framework */; };
+		7EC1FA5416A478D2005FEB07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC1FA5316A478D2005FEB07 /* Foundation.framework */; };
+		7EC1FA5616A478D2005FEB07 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC1FA5516A478D2005FEB07 /* CoreGraphics.framework */; };
+		7EC1FA5C16A478D2005FEB07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7EC1FA5A16A478D2005FEB07 /* InfoPlist.strings */; };
+		7EC1FA5E16A478D2005FEB07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1FA5D16A478D2005FEB07 /* main.m */; };
+		7EC1FA6416A478D2005FEB07 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC1FA6316A478D2005FEB07 /* Default.png */; };
+		7EC1FA6616A478D2005FEB07 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC1FA6516A478D2005FEB07 /* Default@2x.png */; };
+		7EC1FA6816A478D2005FEB07 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EC1FA6716A478D2005FEB07 /* Default-568h@2x.png */; };
+		7EC1FA7E16A47928005FEB07 /* ENAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1FA7816A47928005FEB07 /* ENAppDelegate.m */; };
+		7EC1FA7F16A47928005FEB07 /* ENViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1FA7A16A47928005FEB07 /* ENViewController.m */; };
+		7EC1FA8016A47928005FEB07 /* ENViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EC1FA7B16A47928005FEB07 /* ENViewController_iPhone.xib */; };
+		7EC1FA8116A47928005FEB07 /* ENViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EC1FA7C16A47928005FEB07 /* ENViewController_iPad.xib */; };
+		7EC1FA8216A47928005FEB07 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7EC1FA7D16A47928005FEB07 /* Settings.bundle */; };
+		7EC1FA8E16A4796B005FEB07 /* libENAPILibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC1FA8916A47954005FEB07 /* libENAPILibrary.a */; };
+		7EC1FA9016A47978005FEB07 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC1FA8F16A47978005FEB07 /* MediaPlayer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7EC1FA8816A47954005FEB07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EC1FA8316A47954005FEB07 /* ENAPILibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7EE1165416A3212F00A62D4D;
+			remoteInfo = ENAPILibrary;
+		};
+		7EC1FA8A16A47954005FEB07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EC1FA8316A47954005FEB07 /* ENAPILibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7EE1166516A3213000A62D4D;
+			remoteInfo = ENAPILibraryTests;
+		};
+		7EC1FA8C16A4795F005FEB07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EC1FA8316A47954005FEB07 /* ENAPILibrary.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EE1165316A3212F00A62D4D;
+			remoteInfo = ENAPILibrary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7EC1FA4D16A478D2005FEB07 /* ENAPILibraryExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ENAPILibraryExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EC1FA5116A478D2005FEB07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7EC1FA5316A478D2005FEB07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7EC1FA5516A478D2005FEB07 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7EC1FA5916A478D2005FEB07 /* ENAPILibraryExampleApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ENAPILibraryExampleApp-Info.plist"; sourceTree = "<group>"; };
+		7EC1FA5B16A478D2005FEB07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7EC1FA5D16A478D2005FEB07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7EC1FA5F16A478D2005FEB07 /* ENAPILibraryExampleApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ENAPILibraryExampleApp-Prefix.pch"; sourceTree = "<group>"; };
+		7EC1FA6316A478D2005FEB07 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7EC1FA6516A478D2005FEB07 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7EC1FA6716A478D2005FEB07 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7EC1FA7716A47928005FEB07 /* ENAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENAppDelegate.h; sourceTree = "<group>"; };
+		7EC1FA7816A47928005FEB07 /* ENAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENAppDelegate.m; sourceTree = "<group>"; };
+		7EC1FA7916A47928005FEB07 /* ENViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENViewController.h; sourceTree = "<group>"; };
+		7EC1FA7A16A47928005FEB07 /* ENViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENViewController.m; sourceTree = "<group>"; };
+		7EC1FA7B16A47928005FEB07 /* ENViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ENViewController_iPhone.xib; sourceTree = "<group>"; };
+		7EC1FA7C16A47928005FEB07 /* ENViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ENViewController_iPad.xib; sourceTree = "<group>"; };
+		7EC1FA7D16A47928005FEB07 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		7EC1FA8316A47954005FEB07 /* ENAPILibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ENAPILibrary.xcodeproj; path = ../ENAPILibrary/ENAPILibrary.xcodeproj; sourceTree = "<group>"; };
+		7EC1FA8F16A47978005FEB07 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7EC1FA4A16A478D2005FEB07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EC1FA9016A47978005FEB07 /* MediaPlayer.framework in Frameworks */,
+				7EC1FA8E16A4796B005FEB07 /* libENAPILibrary.a in Frameworks */,
+				7EC1FA5216A478D2005FEB07 /* UIKit.framework in Frameworks */,
+				7EC1FA5416A478D2005FEB07 /* Foundation.framework in Frameworks */,
+				7EC1FA5616A478D2005FEB07 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7EC1FA4216A478D2005FEB07 = {
+			isa = PBXGroup;
+			children = (
+				7EC1FA8F16A47978005FEB07 /* MediaPlayer.framework */,
+				7EC1FA8316A47954005FEB07 /* ENAPILibrary.xcodeproj */,
+				7EC1FA5716A478D2005FEB07 /* ENAPILibraryExampleApp */,
+				7EC1FA5016A478D2005FEB07 /* Frameworks */,
+				7EC1FA4E16A478D2005FEB07 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7EC1FA4E16A478D2005FEB07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EC1FA4D16A478D2005FEB07 /* ENAPILibraryExampleApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7EC1FA5016A478D2005FEB07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EC1FA5116A478D2005FEB07 /* UIKit.framework */,
+				7EC1FA5316A478D2005FEB07 /* Foundation.framework */,
+				7EC1FA5516A478D2005FEB07 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7EC1FA5716A478D2005FEB07 /* ENAPILibraryExampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				7EC1FA7716A47928005FEB07 /* ENAppDelegate.h */,
+				7EC1FA7816A47928005FEB07 /* ENAppDelegate.m */,
+				7EC1FA7916A47928005FEB07 /* ENViewController.h */,
+				7EC1FA7A16A47928005FEB07 /* ENViewController.m */,
+				7EC1FA7B16A47928005FEB07 /* ENViewController_iPhone.xib */,
+				7EC1FA7C16A47928005FEB07 /* ENViewController_iPad.xib */,
+				7EC1FA7D16A47928005FEB07 /* Settings.bundle */,
+				7EC1FA5816A478D2005FEB07 /* Supporting Files */,
+			);
+			path = ENAPILibraryExampleApp;
+			sourceTree = "<group>";
+		};
+		7EC1FA5816A478D2005FEB07 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7EC1FA5916A478D2005FEB07 /* ENAPILibraryExampleApp-Info.plist */,
+				7EC1FA5A16A478D2005FEB07 /* InfoPlist.strings */,
+				7EC1FA5D16A478D2005FEB07 /* main.m */,
+				7EC1FA5F16A478D2005FEB07 /* ENAPILibraryExampleApp-Prefix.pch */,
+				7EC1FA6316A478D2005FEB07 /* Default.png */,
+				7EC1FA6516A478D2005FEB07 /* Default@2x.png */,
+				7EC1FA6716A478D2005FEB07 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7EC1FA8416A47954005FEB07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EC1FA8916A47954005FEB07 /* libENAPILibrary.a */,
+				7EC1FA8B16A47954005FEB07 /* ENAPILibraryTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7EC1FA4C16A478D2005FEB07 /* ENAPILibraryExampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EC1FA7416A478D2005FEB07 /* Build configuration list for PBXNativeTarget "ENAPILibraryExampleApp" */;
+			buildPhases = (
+				7EC1FA4916A478D2005FEB07 /* Sources */,
+				7EC1FA4A16A478D2005FEB07 /* Frameworks */,
+				7EC1FA4B16A478D2005FEB07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EC1FA8D16A4795F005FEB07 /* PBXTargetDependency */,
+			);
+			name = ENAPILibraryExampleApp;
+			productName = ENAPILibraryExampleApp;
+			productReference = 7EC1FA4D16A478D2005FEB07 /* ENAPILibraryExampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7EC1FA4416A478D2005FEB07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = EN;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "The Echo Nest Corporation";
+			};
+			buildConfigurationList = 7EC1FA4716A478D2005FEB07 /* Build configuration list for PBXProject "ENAPILibraryExampleApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7EC1FA4216A478D2005FEB07;
+			productRefGroup = 7EC1FA4E16A478D2005FEB07 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7EC1FA8416A47954005FEB07 /* Products */;
+					ProjectRef = 7EC1FA8316A47954005FEB07 /* ENAPILibrary.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				7EC1FA4C16A478D2005FEB07 /* ENAPILibraryExampleApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7EC1FA8916A47954005FEB07 /* libENAPILibrary.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libENAPILibrary.a;
+			remoteRef = 7EC1FA8816A47954005FEB07 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7EC1FA8B16A47954005FEB07 /* ENAPILibraryTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ENAPILibraryTests.octest;
+			remoteRef = 7EC1FA8A16A47954005FEB07 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7EC1FA4B16A478D2005FEB07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EC1FA5C16A478D2005FEB07 /* InfoPlist.strings in Resources */,
+				7EC1FA6416A478D2005FEB07 /* Default.png in Resources */,
+				7EC1FA6616A478D2005FEB07 /* Default@2x.png in Resources */,
+				7EC1FA6816A478D2005FEB07 /* Default-568h@2x.png in Resources */,
+				7EC1FA8016A47928005FEB07 /* ENViewController_iPhone.xib in Resources */,
+				7EC1FA8116A47928005FEB07 /* ENViewController_iPad.xib in Resources */,
+				7EC1FA8216A47928005FEB07 /* Settings.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7EC1FA4916A478D2005FEB07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EC1FA5E16A478D2005FEB07 /* main.m in Sources */,
+				7EC1FA7E16A47928005FEB07 /* ENAppDelegate.m in Sources */,
+				7EC1FA7F16A47928005FEB07 /* ENViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7EC1FA8D16A4795F005FEB07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ENAPILibrary;
+			targetProxy = 7EC1FA8C16A4795F005FEB07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7EC1FA5A16A478D2005FEB07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EC1FA5B16A478D2005FEB07 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7EC1FA7216A478D2005FEB07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7EC1FA7316A478D2005FEB07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7EC1FA7516A478D2005FEB07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ENAPILibraryExampleApp/ENAPILibraryExampleApp-Prefix.pch";
+				INFOPLIST_FILE = "ENAPILibraryExampleApp/ENAPILibraryExampleApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${SRCROOT}\"/../**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7EC1FA7616A478D2005FEB07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ENAPILibraryExampleApp/ENAPILibraryExampleApp-Prefix.pch";
+				INFOPLIST_FILE = "ENAPILibraryExampleApp/ENAPILibraryExampleApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${SRCROOT}\"/../**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7EC1FA4716A478D2005FEB07 /* Build configuration list for PBXProject "ENAPILibraryExampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EC1FA7216A478D2005FEB07 /* Debug */,
+				7EC1FA7316A478D2005FEB07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EC1FA7416A478D2005FEB07 /* Build configuration list for PBXNativeTarget "ENAPILibraryExampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EC1FA7516A478D2005FEB07 /* Debug */,
+				7EC1FA7616A478D2005FEB07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7EC1FA4416A478D2005FEB07 /* Project object */;
+}
