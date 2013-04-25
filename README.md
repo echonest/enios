@@ -1,7 +1,7 @@
-EN iOS
+ENiOS
 ============
 
-The EN iOS library is an open source Objective-C library for the Echo Nest APIs. It provides the iOS/Objective-C programmer full access to all of the Echo Nest methods including those for artists, songs, playlisting, and taste profiles, as well as methods for retrieving detailed analysis information about an uploaded track. It also includes an example app to demonstrate how to integrate this library into an XCode project.
+The ENiOS library is an open source Objective-C library for the Echo Nest APIs. It provides the iOS/Objective-C programmer full access to all of the Echo Nest methods including those for artists, songs, playlisting, and taste profiles, as well as methods for retrieving detailed analysis information about an uploaded track. It also includes an example app to demonstrate how to integrate this library into an XCode project.
 
 Note: This library is an update to our previous libechonest library, which removes several dependencies and simplifies the code needed to interact with our API. Although we will continue to keep libechonest available on a limited basis, we recommend using this library for all iOS projects moving forward.
 
