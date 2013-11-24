@@ -34,11 +34,11 @@ static NSString *TEST_API_KEY = @"ZNXZA8ZGUJVNLWH87";
     [parameters setValue: @"Radiohead" forKey:@"name"];
     [parameters setValue: [NSNumber numberWithInt:2] forKey:@"results"];
     
-    [ENAPIRequest GETWithEndpoint:@"artist/audio" andParameters:parameters andCompletionBlock:
+    [ENAPIRequest GETWithEndpoint:@"artist/profile" andParameters:parameters andCompletionBlock:
      ^(ENAPIRequest *request) {
          NSLog(@"request %@", request);
          STAssertEquals(request.httpResponseCode, 400, @"Expected 400 response, got: %d", request.httpResponseCode);
-         STAssertEquals(request.echonestStatusCode, 4, @"Expected 4 response, got: %d", request.echonestStatusCode);
+         STAssertEquals(request.echonestStatusCode, 1, @"Expected 4 response, got: %d", request.echonestStatusCode);
          
          //NSLog(@"request.echonestStatusCode %d", request.echonestStatusCode);
          //NSLog(@"errorMessage %@", request.errorMessage);
@@ -59,42 +59,10 @@ static NSString *TEST_API_KEY = @"ZNXZA8ZGUJVNLWH87";
 }
 
 
-- (void)testArtistAudio {
-    NSMutableDictionary *parameters = [NSMutableDictionary new];
-    [parameters setValue: @"Radiohead" forKey:@"name"];
-    [parameters setValue: [NSNumber numberWithInt:2] forKey:@"results"];
-    
-    [ENAPIRequest GETWithEndpoint:@"artist/audio" andParameters:parameters andCompletionBlock:
-     ^(ENAPIRequest *request) {
-         [self testSuccessfulCompletion:request];
-         NSArray *audio = [request.response valueForKeyPath:@"response.audio"];
-         STAssertEquals(audio.count, (NSUInteger)2, @"expected 2 results");
-         [[TestSemaphor sharedInstance] lift:@"testArtistAudio"];
-     }];
-    
-    [[TestSemaphor sharedInstance] waitForKey:@"testArtistAudio"];
-    
-}
-
-- (void)testArtistAudioWithID {
-    NSMutableDictionary *parameters = [NSMutableDictionary new];
-    [parameters setValue:@"ARH6W4X1187B99274F" forKey:@"id"];
-    [parameters setValue: [NSNumber numberWithInt:2] forKey:@"results"];
-    
-    [ENAPIRequest GETWithEndpoint:@"artist/audio" andParameters:parameters andCompletionBlock:
-     ^(ENAPIRequest *request) {
-         [self testSuccessfulCompletion:request];
-         STAssertEquals([[request.response valueForKeyPath:@"response.audio"] count], (NSUInteger)2, @"expected 2 results");
-         [[TestSemaphor sharedInstance] lift:@"testArtistAudioWithID"];
-     }];
-    
-    [[TestSemaphor sharedInstance] waitForKey:@"testArtistAudioWithID"];
-    
-}
 
 - (void)testArtistBiographies {
     NSMutableDictionary *parameters = [NSMutableDictionary new];
-    NSArray *licenses = [NSArray arrayWithObjects:ENLicenseEchoSource, ENLicenseCreativeCommonsBy_SA, nil];
+    NSArray *licenses = [NSArray arrayWithObjects:ENLicenseCreativeCommonsBy_SA, nil];
     [parameters setValue: @"Radiohead" forKey:@"name"];
     [parameters setValue: licenses forKey:@"license"];
     [parameters setValue: [NSNumber numberWithInt:1] forKey:@"results"];
@@ -412,8 +380,8 @@ static NSString *TEST_API_KEY = @"ZNXZA8ZGUJVNLWH87";
     [ENAPIRequest GETWithEndpoint:@"artist/urls" andParameters:parameters andCompletionBlock:
      ^(ENAPIRequest *request) {
          [self testSuccessfulCompletion:request];
-         NSString *itunesURL = [request.response valueForKeyPath:@"response.urls.itunes_url"];
-         STAssertTrue([itunesURL isEqualToString:@"http://itunes.com/DepecheMode"], @"Expected iTunes URL, got: %@", itunesURL);
+         NSString *wikipediaURL = [request.response valueForKeyPath:@"response.urls.wikipedia_url"];
+         STAssertTrue([wikipediaURL isEqualToString:@"http://en.wikipedia.org/wiki/Depeche_Mode"], @"Expected Wikipedia URL, got: %@", wikipediaURL);
          [[TestSemaphor sharedInstance] lift:@"testArtistURLs"];
      }];
     
@@ -545,7 +513,7 @@ static NSString *TEST_API_KEY = @"ZNXZA8ZGUJVNLWH87";
     [ENAPIRequest GETWithEndpoint:@"playlist/static" andParameters:parameters andCompletionBlock:
      ^(ENAPIRequest *request) {
          [self testSuccessfulCompletion:request];
-         STAssertEquals([[request.response valueForKeyPath:@"response.songs"] count], (NSUInteger)1, @"expected 1 results");
+         STAssertEquals([[request.response valueForKeyPath:@"response.songs"] count], (NSUInteger)15, @"expected 1 results");
          [[TestSemaphor sharedInstance] lift:@"testStaticPlaylist"];
      }];
     

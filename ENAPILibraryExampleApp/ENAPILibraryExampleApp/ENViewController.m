@@ -43,13 +43,13 @@
     self.textView.text = nil;
 }
 
--(void)updateTextViewAfterAudioRequest:(ENAPIRequest *)request {
-    self.textView.text = [NSString stringWithFormat:@"http status code: %d\nechonest status code: %d\nechonest status message: %@\nerror message: %@\naudio: %@",
+-(void)updateTextViewAfterNewsRequest:(ENAPIRequest *)request {
+    self.textView.text = [NSString stringWithFormat:@"http status code: %d\nechonest status code: %d\nechonest status message: %@\nerror message: %@\nnews: %@",
                           request.httpResponseCode,
                           request.echonestStatusCode,
                           request.echonestStatusMessage,
                           request.errorMessage,
-                          [request.response valueForKeyPath:@"response.audio"]
+                          [request.response valueForKeyPath:@"response.news"]
                           ];
 }
 
@@ -59,10 +59,10 @@
     [parameters setValue:@"Radiohead" forKey:@"name"];
     [parameters setValue:[NSNumber numberWithInteger:15] forKey:@"results"];
     
-    [ENAPIRequest GETWithEndpoint:@"artist/audio"
+    [ENAPIRequest GETWithEndpoint:@"artist/news"
                     andParameters:parameters
                andCompletionBlock:^(ENAPIRequest *request) {
-                   [self updateTextViewAfterAudioRequest:request];
+                   [self updateTextViewAfterNewsRequest:request];
                }];
     
 }

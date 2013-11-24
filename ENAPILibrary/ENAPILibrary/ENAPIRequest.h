@@ -52,7 +52,7 @@ static NSString __attribute__((unused)) * const ECHONEST_API_URL = @"http://deve
  * To make an Echo Nest HTTP GET or POST request use the "GETWithEndpoint:andParameters:andCompletionBlock" or "POSTWithEndpoint:andParameters:andCompletionBlock" class methods respectively.  Put the request parameters into a dictionary and pass them to the request.  Create and pass a completion block with an ENAPIRequest parameter to be executed when the request completes.  In the completion block, check that the request completed successfully and then access the result from the response Dictionary.
  * Example usage...
  
-    [ENAPIRequest GETWithEndpoint:@"artist/audio"
+    [ENAPIRequest GETWithEndpoint:@"artist/news"
         andParameters:[NSDictionary dictionaryWithObjectsAndKeys:@"Radiohead", @"name",[NSNumber numberWithInt:15], @"results",nil] 
         andCompletionBlock:^(ENAPIRequest *request) {
             if (request.completedSuccessfully) {
