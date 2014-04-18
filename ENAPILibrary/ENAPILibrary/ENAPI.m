@@ -140,7 +140,7 @@ NSString *ENEscapeStringForURL (NSString *str) {
     unsigned char md5Buffer[CC_MD5_DIGEST_LENGTH];
     
     // Create 16 byte MD5 hash value, store in buffer
-    CC_MD5(data.bytes, data.length, md5Buffer);
+    CC_MD5(data.bytes, (CC_LONG) data.length, md5Buffer);
     
     // Convert unsigned char buffer to NSString of hex values
     NSMutableString *output = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];

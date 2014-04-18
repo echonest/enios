@@ -117,7 +117,7 @@ static NSMutableArray *EN_SECURED_ENDPOINTS = nil;
 }
 
 - (NSString *)generateNonce:(NSInteger)timestamp {
-    NSString *tmp = [[NSString alloc] initWithFormat:@"%d", timestamp];
+    NSString *tmp = [[NSNumber numberWithInteger:timestamp] stringValue];
     NSData *nonceData = [tmp dataUsingEncoding:NSUTF8StringEncoding];
     NSString *nonce = [ENAPI calculateMD5DigestFromData:nonceData];
     return nonce;
@@ -218,7 +218,7 @@ static NSMutableArray *EN_SECURED_ENDPOINTS = nil;
     [body appendData:[[NSString stringWithFormat:@"--\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
     
     if (body != nil) {
-        [request setValue:[NSString stringWithFormat:@"%d", [body length]] forHTTPHeaderField:@"Content-Length"];
+        [request setValue:[[NSNumber numberWithUnsignedInteger:[body length]] stringValue] forHTTPHeaderField:@"Content-Length"];
         [request setHTTPBody:body];
     } else {
         NSLog(@"ENAPIRequest: post body is nil");
