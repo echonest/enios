@@ -340,6 +340,10 @@ static NSMutableArray *EN_SECURED_ENDPOINTS = nil;
     return self.urlResponse.statusCode;
 }
 
+- (NSDictionary *)httpResponseHeaders {
+    return [self.urlResponse allHeaderFields];
+}
+
 - (NSInteger)echonestStatusCode {
     if (self.response == nil) {
         return -1;
@@ -410,31 +414,10 @@ static NSMutableArray *EN_SECURED_ENDPOINTS = nil;
 }
 
 #pragma NSURLConnectionDelegate
-- (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace {
-    NSLog(@"ENAPIRequest: unexpected canAuthenticateAgainstProtectionSpace");
-    return YES;
-}
-
-- (void)connection:(NSURLConnection *)connection didCancelAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
-    NSLog(@"ENAPIRequest: unexpected didCancelAuthenticationChallenge");
-}
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     self.error = error;
     [self executeCompletionBlock];
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
-    NSLog(@"ENAPIRequest: unexpected didReceiveAuthenticationChallenge");
-}
-
-- (void)connection:(NSURLConnection *)connection willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
-    NSLog(@"ENAPIRequest: unexpected willSendRequestForAuthenticationChallenge");
-}
-
-- (BOOL)connectionShouldUseCredentialStorage:(NSURLConnection *)connection {
-    NSLog(@"ENAPIRequest: unexpected connectionShouldUseCredentialStorage");
-    return YES;
 }
 
 @end
