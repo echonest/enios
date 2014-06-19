@@ -174,6 +174,8 @@ static NSMutableArray *EN_SECURED_ENDPOINTS = nil;
     
     [request setTimeoutInterval:requestTimeoutInterval];
     
+    [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
+    
     self.connection =[[NSURLConnection alloc] initWithRequest:request delegate:self];
     
     if (self.connection == nil) {
@@ -193,6 +195,8 @@ static NSMutableArray *EN_SECURED_ENDPOINTS = nil;
     request.HTTPMethod = @"POST";
     
     [request setValue:[NSString stringWithFormat:@"multipart/form-data; boundary=%@",boundary] forHTTPHeaderField:@"Content-Type"];
+    
+    [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
     
     NSMutableData *body = [NSMutableData data];
     [body appendData:[[NSString stringWithFormat:@"--%@", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
