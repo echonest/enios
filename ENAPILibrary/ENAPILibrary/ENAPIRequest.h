@@ -88,7 +88,6 @@ static NSString __attribute__((unused)) * const ECHONEST_API_URL = @"http://deve
 + (NSArray *)securedEndpoints;
 + (BOOL)isSecuredEndpoint:(NSString *)endpoint;
 
-
 /**
  * Execute a Echo Nest Web Service GET request and represent the JSON response as a dictionary object.
  @param endpoint The Echo Nest webservice endpoint.
@@ -101,6 +100,19 @@ static NSString __attribute__((unused)) * const ECHONEST_API_URL = @"http://deve
                andCompletionBlock:(ENAPIRequestCompletionBlock)completionBlock;
 
 /**
+ * Execute a Echo Nest Web Service GET request and represent the JSON response as a dictionary object.
+ @param endpoint The Echo Nest webservice endpoint.
+ @param parameters The parameters for this endpoint as key/value pairs.
+ @param completionBlock The block of code to be executed on completion of the request, the request instance is returned as a parameter to allow access to the response and/or error information.
+ @param allowCachedData Whether or not a cached response is allowed. The default value is YES.
+ @return Returns the request instance, intended to be used for debugging or canceling an individual request.
+ */
++ (ENAPIRequest *)GETWithEndpoint:(NSString *)endpoint
+                    andParameters:(NSDictionary *)parameters
+               andCompletionBlock:(ENAPIRequestCompletionBlock)completionBlock
+                  allowCachedData:(BOOL)allowCachedData;
+
+/**
  * Execute a Echo Nest Web Service POST request and represent the JSON response as a dictionary object.
  @param endpoint The Echo Nest webservice endpoint.
  @param parameters The parameters for this endpoint as key/value pairs.
@@ -110,6 +122,19 @@ static NSString __attribute__((unused)) * const ECHONEST_API_URL = @"http://deve
 + (ENAPIRequest *)POSTWithEndpoint:(NSString *)endpoint
                      andParameters:(NSDictionary *)parameters
                 andCompletionBlock:(ENAPIRequestCompletionBlock)completionBlock;
+
+/**
+ * Execute a Echo Nest Web Service POST request and represent the JSON response as a dictionary object.
+ @param endpoint The Echo Nest webservice endpoint.
+ @param parameters The parameters for this endpoint as key/value pairs.
+ @param completionBlock The block of code to be executed on completion of the request, the request instance is returned as a parameter to allow access to the response data and/or error information.
+ @param allowCachedData Whether or not a cached response is allowed. The default value is YES.
+ @return returns The request instance, intended to be used for debugging or canceling an individual request.
+ */
++ (ENAPIRequest *)POSTWithEndpoint:(NSString *)endpoint
+                     andParameters:(NSDictionary *)parameters
+                andCompletionBlock:(ENAPIRequestCompletionBlock)completionBlock
+                   allowCachedData:(BOOL)allowCachedData;
 
 /**
  * Cancels all active requests.
@@ -175,6 +200,11 @@ static NSString __attribute__((unused)) * const ECHONEST_API_URL = @"http://deve
  * The raw data returned by the service, useful for debugging.
  */
 @property (nonatomic, strong, readonly) NSData *data;
+
+/**
+ * Whether or not cached data is allowed for the response.
+ */
+@property (readonly) BOOL cachedDataAllowed;
 
 
 @end
