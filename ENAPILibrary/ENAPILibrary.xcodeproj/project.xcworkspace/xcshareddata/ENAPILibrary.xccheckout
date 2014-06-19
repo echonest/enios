@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FB5E9F3C-8700-4AC7-B417-28D7F33CDB9B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ENAPILibrary</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C00DEDE6-CD91-4851-B65D-250053E807CA</key>
+		<string>https://github.com/myellen/enios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ENAPILibrary/ENAPILibrary.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C00DEDE6-CD91-4851-B65D-250053E807CA</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/myellen/enios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C00DEDE6-CD91-4851-B65D-250053E807CA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C00DEDE6-CD91-4851-B65D-250053E807CA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>my_enios_fork</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -70,6 +70,8 @@ static NSString *boundary = @"0xKhTmLbOuNdArY";
 @synthesize urlResponse = _urlResponse;
 @synthesize connection = _connection;
 
+@synthesize cachedDataAllowed = _cachedDataAllowed;
+
 static NSString *EN_API_KEY = nil;
 static NSString *EN_CONSUMER_KEY = nil;
 static NSString *EN_SHARED_SECRET = nil;
@@ -80,6 +82,13 @@ static NSMutableArray *EN_SECURED_ENDPOINTS = nil;
 - (ENAPIRequest *)initWithEndpoint:(NSString *)endpoint
                      andParameters:(NSDictionary *)parameters
                 andCompletionBlock:(ENAPIRequestCompletionBlock)completionBlock {
+    return [self initWithEndpoint:endpoint andParameters:parameters andCompletionBlock:completionBlock allowCachedData:YES];
+}
+
+- (ENAPIRequest *)initWithEndpoint:(NSString *)endpoint
+                     andParameters:(NSDictionary *)parameters
+                andCompletionBlock:(ENAPIRequestCompletionBlock)completionBlock
+                   allowCachedData:(BOOL)allowCachedData {
     
     self = [super init];
     if (self) {
@@ -87,6 +96,7 @@ static NSMutableArray *EN_SECURED_ENDPOINTS = nil;
         //CHECK_API_KEY
         self.completionBlock = completionBlock;
         _endpoint = endpoint;
+        _cachedDataAllowed = allowCachedData;
         [self.parameters addEntriesFromDictionary:parameters];
         [self.parameters setValue:[ENAPIRequest apiKey] forKey:@"api_key"];
         [self.parameters setValue:@"json" forKey:@"format"];
@@ -174,7 +184,7 @@ static NSMutableArray *EN_SECURED_ENDPOINTS = nil;
     
     [request setTimeoutInterval:requestTimeoutInterval];
     
-    [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
+    if (!self.cachedDataAllowed) [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
     
     self.connection =[[NSURLConnection alloc] initWithRequest:request delegate:self];
     
@@ -196,7 +206,7 @@ static NSMutableArray *EN_SECURED_ENDPOINTS = nil;
     
     [request setValue:[NSString stringWithFormat:@"multipart/form-data; boundary=%@",boundary] forHTTPHeaderField:@"Content-Type"];
     
-    [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
+    if (!self.cachedDataAllowed) [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
     
     NSMutableData *body = [NSMutableData data];
     [body appendData:[[NSString stringWithFormat:@"--%@", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
@@ -248,9 +258,21 @@ static NSMutableArray *EN_SECURED_ENDPOINTS = nil;
                     andParameters:(NSDictionary *)parameters
                andCompletionBlock:(ENAPIRequestCompletionBlock)completionBlock {
     
+    return [[self class] GETWithEndpoint:endpoint
+                           andParameters:parameters
+                      andCompletionBlock:completionBlock
+                         allowCachedData:YES];
+}
+
++ (ENAPIRequest *)GETWithEndpoint:(NSString *)endpoint
+                    andParameters:(NSDictionary *)parameters
+               andCompletionBlock:(ENAPIRequestCompletionBlock)completionBlock
+                  allowCachedData:(BOOL)allowCachedData {
+    
     ENAPIRequest *request = [[ENAPIRequest alloc] initWithEndpoint:endpoint
                                                      andParameters:parameters
-                                                andCompletionBlock:completionBlock];
+                                                andCompletionBlock:completionBlock
+                                                   allowCachedData:allowCachedData];
     
     [request initiateGetRequest];
     return request;
@@ -260,9 +282,21 @@ static NSMutableArray *EN_SECURED_ENDPOINTS = nil;
                      andParameters:(NSDictionary *)parameters
                 andCompletionBlock:(ENAPIRequestCompletionBlock)completionBlock {
     
+    return [[self class] POSTWithEndpoint:endpoint
+                            andParameters:parameters
+                       andCompletionBlock:completionBlock
+                          allowCachedData:YES];
+}
+
++ (ENAPIRequest *)POSTWithEndpoint:(NSString *)endpoint
+                     andParameters:(NSDictionary *)parameters
+                andCompletionBlock:(ENAPIRequestCompletionBlock)completionBlock
+                   allowCachedData:(BOOL)allowCachedData {
+    
     ENAPIRequest *request = [[ENAPIRequest alloc] initWithEndpoint:endpoint
                                                      andParameters:parameters
-                                                andCompletionBlock:completionBlock];
+                                                andCompletionBlock:completionBlock
+                                                   allowCachedData:allowCachedData];
     [request initiatePostRequest];
     return request;
 }
