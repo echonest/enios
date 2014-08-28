@@ -117,7 +117,7 @@ static NSMutableArray *EN_SECURED_ENDPOINTS = nil;
 }
 
 - (NSString *)generateNonce:(NSInteger)timestamp {
-    NSString *tmp = [[NSString alloc] initWithFormat:@"%d", timestamp];
+    NSString *tmp = [[NSNumber numberWithInteger:timestamp] stringValue];
     NSData *nonceData = [tmp dataUsingEncoding:NSUTF8StringEncoding];
     NSString *nonce = [ENAPI calculateMD5DigestFromData:nonceData];
     return nonce;
@@ -218,7 +218,7 @@ static NSMutableArray *EN_SECURED_ENDPOINTS = nil;
     [body appendData:[[NSString stringWithFormat:@"--\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
     
     if (body != nil) {
-        [request setValue:[NSString stringWithFormat:@"%d", [body length]] forHTTPHeaderField:@"Content-Length"];
+        [request setValue:[[NSNumber numberWithUnsignedInteger:[body length]] stringValue] forHTTPHeaderField:@"Content-Length"];
         [request setHTTPBody:body];
     } else {
         NSLog(@"ENAPIRequest: post body is nil");
@@ -340,6 +340,10 @@ static NSMutableArray *EN_SECURED_ENDPOINTS = nil;
     return self.urlResponse.statusCode;
 }
 
+- (NSDictionary *)httpResponseHeaders {
+    return [self.urlResponse allHeaderFields];
+}
+
 - (NSInteger)echonestStatusCode {
     if (self.response == nil) {
         return -1;
@@ -410,31 +414,10 @@ static NSMutableArray *EN_SECURED_ENDPOINTS = nil;
 }
 
 #pragma NSURLConnectionDelegate
-- (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace {
-    NSLog(@"ENAPIRequest: unexpected canAuthenticateAgainstProtectionSpace");
-    return YES;
-}
-
-- (void)connection:(NSURLConnection *)connection didCancelAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
-    NSLog(@"ENAPIRequest: unexpected didCancelAuthenticationChallenge");
-}
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     self.error = error;
     [self executeCompletionBlock];
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
-    NSLog(@"ENAPIRequest: unexpected didReceiveAuthenticationChallenge");
-}
-
-- (void)connection:(NSURLConnection *)connection willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
-    NSLog(@"ENAPIRequest: unexpected willSendRequestForAuthenticationChallenge");
-}
-
-- (BOOL)connectionShouldUseCredentialStorage:(NSURLConnection *)connection {
-    NSLog(@"ENAPIRequest: unexpected connectionShouldUseCredentialStorage");
-    return YES;
 }
 
 @end

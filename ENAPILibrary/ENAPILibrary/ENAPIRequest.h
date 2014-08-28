@@ -132,6 +132,11 @@ static NSString __attribute__((unused)) * const ECHONEST_API_URL = @"http://deve
 @property (readonly) NSInteger httpResponseCode;
 
 /**
+ * The HTTP headers with this response.
+ */
+@property (readonly) NSDictionary *httpResponseHeaders;
+
+/**
  * The Echo Nest status code, 0 is a successful status.  [Echo Nest response code list.](http://developer.echonest.com/docs/v4/index.html#response-codes)
  */
 @property (readonly) NSInteger echonestStatusCode;
