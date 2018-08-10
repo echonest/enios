@@ -17,7 +17,7 @@ Quick Start Example
 
 3. In Xcode, create a new Project Workspace by selecting File/New/Workspace and save it in the 'MyWorkspace' folder. Title it something like 'MyWorkspace'.
 
-4. Right click in the project navigator window and create your new project. Title it something like 'MyProject'. (Alternately, for adding the the ENAPILibrary to an existing project: in the Finder, drag an existing project folder into the MyProjectsWorkspace folder, then add the project to the workspace in Xcode by dragging the .xcodeproj file into the project navigator window.)
+4. Right click in the project navigator window and create your new project. Title it something like 'MyProject'. (Alternately, for adding the ENAPILibrary to an existing project: in the Finder, drag an existing project folder into the MyProjectsWorkspace folder, then add the project to the workspace in Xcode by dragging the .xcodeproj file into the project navigator window.)
 
 5. Right click on 'MyProject' in the project navigator and select Add Files to 'MyProject'. Navigate to the file 'ENAPILibrary.xcodeproj' in the ENAPILibrary folder, and add it to your project.
 
